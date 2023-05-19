@@ -129,7 +129,7 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--Dark);
+  color: var(--Pressed-State);
   list-style: none;
   display: flex;
   padding: 24px 0;
@@ -441,7 +441,7 @@ img {
   color: #8E8F99;
   width: 100%;
   height: 100%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -572,9 +572,10 @@ img {
   border: 1px solid #E7E9FC;
   border-radius: 4px;
   padding: 12px 24px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-btn:hover,
@@ -673,12 +674,13 @@ img {
   width: 100%;
   height: 100%;
   background: rgba(46, 47, 66, 0.4);
-  transition: opacity 300ms linear, visibility 300ms linear;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
   width: 408px;
-  min-height: 584px;
+  min-height: 576px;
   background-color: #FCFCFC;
   border-radius: 4px;
   position: absolute;
@@ -698,6 +700,9 @@ img {
 }
 
 .modal-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--Accent);
   width: 24px;
@@ -707,6 +712,16 @@ img {
   align-items: center;
   justify-content: center;
   margin-left: auto;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  background-color: #404bbf;
+  border: 0;
 }
 
 .is-hidden {
@@ -716,5 +731,10 @@ img {
 }
 
 .order-service-btn-icon {
-  fill: var(--Dark);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.order-service-btn-icon:hover>.use,
+.order-service-btn-icon:focus>.use {
+  fill: #ffffff
 }
