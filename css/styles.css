@@ -576,6 +576,7 @@ img {
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-btn:hover,
@@ -722,6 +723,7 @@ img {
 .modal-close:focus {
   background-color: #404bbf;
   border: 0;
+  fill: #ffffff
 }
 
 .is-hidden {
@@ -732,9 +734,4 @@ img {
 
 .order-service-btn-icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.order-service-btn-icon:hover>.use,
-.order-service-btn-icon:focus>.use {
-  fill: #ffffff
 }
